@@ -1,0 +1,45 @@
+# Microservice Configuration
+server:
+  port: 8100
+
+# Spring Configuration
+spring:
+  application:
+    name: netflix
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          # Enable bulk
+          batch_size: 1000
+        generate_statistics: false
+        order_inserts: false
+  enable:
+    scheduling: true
+
+  # Database connection
+  datasource:
+    url: jdbc:mysql://localhost:3306/netflix?serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: root
+    
+
+  # Flyway configuration
+  flyway:
+    location: classpath:db/migration
+    enabled: true
+    driver: com.mysql.cj.jdbc.Driver
+    schemas: netflix
+    sql-migration-prefix: V
+    baseline-on-migrate: true
+    initialVersion: 0.0.0.0
+    url: jdbc:mysql://localhost:3306/netflix?serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: root
+
+# Endpoint microservice exposed
+netflix:
+  resource:
+    version: /v1
+    category: /category
+
