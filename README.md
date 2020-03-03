@@ -31,7 +31,7 @@ Video--> Actor;
 ## As a user I want to:
 
 - [x] Get all the categories
-- [ ] Create new category
+- [x] Create new category
 - [ ] Get all the videos
 - [ ] Create new video
 - [ ] Get all the actors
