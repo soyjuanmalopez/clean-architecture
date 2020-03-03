@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import netflix.app.persistence.converters.CategoryRepositoryConverter;
-import netflix.app.persistence.impl.CategoriServiceImpl;
-import netflix.app.persistence.repositories.CategoryRepository;
-import netflix.app.web.converters.CategoryRestConverter;
-import netflix.core.category.useCase.CreateCategoryUseCaseImpl;
-import netflix.core.category.useCase.GetAllCategoriesUseCaseImpl;
+import netflix.app.core.category.useCase.CreateCategoryUseCaseImpl;
+import netflix.app.core.category.useCase.GetAllCategoriesUseCaseImpl;
+import netflix.app.infraestructura.delivery.converters.CategoryRestConverter;
+import netflix.app.infraestructura.persistence.converters.CategoryRepositoryConverter;
+import netflix.app.infraestructura.persistence.impl.CategoriServiceImpl;
+import netflix.app.infraestructura.persistence.repositories.CategoryRepository;
 
 @Configuration
 public class CategoryConfiguration {
