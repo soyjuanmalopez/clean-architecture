@@ -6,25 +6,18 @@ import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import netflix.core.utils.constants.ExceptionConstants;
-import netflix.core.utils.exceptions.BadRequestException;
-import netflix.core.utils.exceptions.NetflixException;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class CategoryRest implements Serializable {
 
-	private static final long serialVersionUID = -2684782811267647848L;
+	private static final long serialVersionUID = 7809559376441998463L;
 
 	@NotNull
 	private String name;
 
 	@NotNull
 	private Boolean available;
-
-	public void validate() throws NetflixException {
-		if (this.name.length() > 25)
-			throw new BadRequestException(ExceptionConstants.BAD_REQUEST_MESSAGE);
-
-	}
 }

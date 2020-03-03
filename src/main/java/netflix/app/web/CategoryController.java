@@ -10,4 +10,6 @@ public interface CategoryController {
 
 	NetflixResponse<Collection<CategoryRest>> getCategories() throws NetflixException;
 
+	NetflixResponse<Boolean> createCategory(CategoryRest category) throws NetflixException;
+
 }
