@@ -8,6 +8,7 @@ import netflix.app.persistence.converters.CategoryRepositoryConverter;
 import netflix.app.persistence.impl.CategoriServiceImpl;
 import netflix.app.persistence.repositories.CategoryRepository;
 import netflix.app.web.converters.CategoryRestConverter;
+import netflix.core.category.useCase.CreateCategoryUseCaseImpl;
 import netflix.core.category.useCase.GetAllCategoriesUseCaseImpl;
 
 @Configuration
@@ -35,6 +36,11 @@ public class CategoryConfiguration {
 	@Bean
 	public GetAllCategoriesUseCaseImpl createGetAllCategoriesUseCase() {
 		return new GetAllCategoriesUseCaseImpl(createCategoriServiceImpl());
+	}
+	
+	@Bean
+	public CreateCategoryUseCaseImpl createCreateCategoryUseCase() {
+		return new CreateCategoryUseCaseImpl(createCategoriServiceImpl());
 	}
 
 }
