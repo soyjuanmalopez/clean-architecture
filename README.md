@@ -1,15 +1,6 @@
 # netflixCleanArquitecture
 
-
-
-## DDBB
-
-```mermaid
-graph TD;
-Category --> Video;
-Video--> Actor;
-```
-TODO before start:
+## TODO before start:
  
  **Lombok**
  
@@ -25,6 +16,14 @@ TODO before start:
   
   *Execute all sql found into src/main/resource/db/migration
 
+
+## DDBB
+
+```mermaid
+graph TD;
+Category --> Video;
+Video--> Actor;
+```
 
 ## Validations
 
