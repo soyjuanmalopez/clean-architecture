@@ -11,11 +11,11 @@ Video--> Actor;
 ```
 TODO before start:
  
- *Lombok*
+ **Lombok**
  
  Download lombok library and install it
  
- *SetUp DataBase*
+ **SetUp DataBase**
  
   *Execute the app
  
