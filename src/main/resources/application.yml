@@ -7,6 +7,7 @@ spring:
   application:
     name: netflix
   jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
     properties:
       hibernate:
         jdbc:
@@ -19,23 +20,14 @@ spring:
 
   # Database connection
   datasource:
-    url: jdbc:mysql://localhost:3306/netflix?serverTimezone=UTC&rewriteBatchedStatements=true
+    url: jdbc:h2:./data/netflix
+    driverClassName: org.h2.Driver
     username: root
     password: root
-    
-
-  # Flyway configuration
-  flyway:
-    location: classpath:db/migration
-    enabled: true
-    driver: com.mysql.cj.jdbc.Driver
-    schemas: netflix
-    sql-migration-prefix: V
-    baseline-on-migrate: true
-    initialVersion: 0.0.0.0
-    url: jdbc:mysql://localhost:3306/netflix?serverTimezone=UTC&rewriteBatchedStatements=true
-    username: root
-    password: root
+  
+  h2:
+    console:
+      enabled: true
 
 # Endpoint microservice exposed
 netflix:
