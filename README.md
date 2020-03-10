@@ -10,9 +10,13 @@ Category --> Video;
 Video--> Actor;
 ```
 TODO before start:
+  
   *Execute the app
+  
   *Go to http://localhost:8100/h2-console
+  
   *Login with the credentials written into app.properties
+  
   *Execute all sql found into src/main/resource/db/migration
 
 
