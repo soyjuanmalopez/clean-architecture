@@ -18,16 +18,10 @@ spring:
   enable:
     scheduling: true
 
-  # Database connection
   datasource:
-    url: jdbc:h2:./data/netflix
-    driverClassName: org.h2.Driver
-    username: root
+    url: jdbc:mysql://35.195.96.250:5432/netflix?serverTimezone=UTC&rewriteBatchedStatements=true
+    username: postgres
     password: root
-  
-  h2:
-    console:
-      enabled: true
 
 # Endpoint microservice exposed
 netflix:
