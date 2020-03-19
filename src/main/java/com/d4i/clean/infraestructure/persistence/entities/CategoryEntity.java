@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -23,7 +24,8 @@ public class CategoryEntity implements Serializable {
 	private static final long serialVersionUID = 4471777119419172870L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "categorySeq")
+	@SequenceGenerator(name = "categorySeq", sequenceName = "category_id_seq", allocationSize=1)
 	private Long id;
 
 	@Column(name = "NAME", unique = true)
