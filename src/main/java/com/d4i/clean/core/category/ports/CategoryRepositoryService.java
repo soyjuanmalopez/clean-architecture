@@ -10,4 +10,6 @@ public interface CategoryRepositoryService {
 	public Collection<Category> getAllCategories();
 	
 	public void saveCategory(Category category) throws NetflixException;
+
+	public Boolean doesCategoryNameExists(String name);
 }

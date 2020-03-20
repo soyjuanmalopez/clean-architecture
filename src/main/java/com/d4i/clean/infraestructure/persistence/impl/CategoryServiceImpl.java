@@ -29,12 +29,10 @@ public class CategoryServiceImpl implements CategoryRepositoryService {
 
 	@Override
 	public void saveCategory(Category category) throws NetflixException {
-		if (doesCategoryNameExists(category.getName()))
-			throw new BadRequestException(ExceptionConstants.BAD_REQUEST_EXISTS_CATEGORY_MESSAGE);
 		categoryRepository.save(categoryRepositoryConverter.mapToTable(category));
 	}
 
-	private Boolean doesCategoryNameExists(String name) {
+	public Boolean doesCategoryNameExists(String name) {
 		return !categoryRepository.findByName(name).isEmpty();
 	}
 

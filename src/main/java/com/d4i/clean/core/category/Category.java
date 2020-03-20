@@ -2,21 +2,27 @@ package com.d4i.clean.core.category;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+
+
+
+import com.d4i.clean.core.shared.SelfValidating;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public final class Category implements Serializable {
+public class Category extends SelfValidating<Category> implements Serializable{
 
-	private static final long serialVersionUID = -5611389089964568317L;
-
+	@Min(0)
 	private Long id;
 
+	@NotEmpty
 	private String name;
 
 	private Boolean available;
 
-	
 	
 }
