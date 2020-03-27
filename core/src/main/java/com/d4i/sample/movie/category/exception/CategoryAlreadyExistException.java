@@ -3,7 +3,7 @@ package com.d4i.sample.movie.category.exception;
 
 
 
-public class CategoryAlreadyExistException {
+public class CategoryAlreadyExistException extends Exception {
 	
 
 

@@ -28,7 +28,7 @@ public class CategoryServiceImpl implements CategoryRepositoryService {
 	}
 
 	@Override
-	public void saveCategory(Category category) throws NetflixException {
+	public void saveCategory(Category category) {
 		categoryRepository.save(categoryRepositoryConverter.mapToTable(category));
 	}
 

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.d4i.sample.movie.category.exception.CategoryAlreadyExistException;
 import com.d4i.sample.movie.category.usecase.CreateCategoryUseCase;
 import com.d4i.sample.movie.category.usecase.GetAllCategoriesUseCase;
 import com.d4i.sample.movie.delivery.CategoryController;
@@ -51,7 +52,12 @@ public class CategoryControllerImpl implements CategoryController {
 	@PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public NetflixResponse<Boolean> createCategory(@Valid @RequestBody final CategoryRest category) throws NetflixException {
 		
-		createCategoryUseCase.execute(categoryRestConverter.mapToEntity(category));
+		try {
+			createCategoryUseCase.execute(categoryRestConverter.mapToEntity(category));
+		} catch (CategoryAlreadyExistException e) {
+			e.printStackTrace();
+			
+		}
 		
 		return new NetflixResponse<>(CommonConstants.SUCCESS, String.valueOf(HttpStatus.OK), CommonConstants.OK);
 	}

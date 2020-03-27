@@ -25,9 +25,9 @@
 	<dependencies>
 
 		<dependency>
-		<groupId>com.d4i.sample.core</groupId>
-		<artifactId>clean-arch-core</artifactId>
-		<version>0.0.1</version>
+			<groupId>com.d4i.sample.movie</groupId>
+			<artifactId>clean-arch-core</artifactId>
+			<version>0.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
