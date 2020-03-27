@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.d4i.sample.movie</groupId>
+	<artifactId>clean-arch-core</artifactId>
+	<version>0.0.1</version>
+	<name>core</name>
+	<packaging>jar</packaging>
+	<description>domain project</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<lombok.version>1.18.8</lombok.version>
+		<swagger2.version>2.8.0</swagger2.version>
+	</properties>
+
+	<parent>
+		<groupId>com.d4i.sample</groupId>
+		<artifactId>clean-arch</artifactId>
+		<version>1.0</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+			<version>${lombok.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+			<version>3.0.0-M1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+
+	</dependencies>
+
+</project>
