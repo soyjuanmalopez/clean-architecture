@@ -24,10 +24,4 @@ public class SwaggerConfig {
 	            .build();
 	}
 
-	private ApiInfo apiInfo() {
-		return new ApiInfoBuilder().title("Soy Juanmalopez").description("Apis realizadas con clean arquitecture")
-				.termsOfServiceUrl("https://www.everis.com").license("everis").licenseUrl("https://www.everis.com")
-				.version("1.0").build();
-	}
-
 }

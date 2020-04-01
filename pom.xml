@@ -16,6 +16,8 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <lombok.version>1.18.6</lombok.version>
     <spring-boot.version>2.1.7.RELEASE</spring-boot.version>
+        <jib-maven-plugin.version>2.1.0</jib-maven-plugin.version>
+    <!-- <image>ue.gcr.io/juanmlopez/${project.artifactId}:${project.version}</image> -->
   </properties>
 
 
@@ -24,4 +26,19 @@
     <module>core</module>
   </modules>
 
+
+  <build>
+
+    <!-- Defines plugins that are used in the modules. -->
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>com.google.cloud.tools</groupId>
+          <artifactId>jib-maven-plugin</artifactId>
+          <version>${jib-maven-plugin.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>
