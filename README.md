@@ -4,4 +4,12 @@ Multiporject maven.
 
 Explain
 
-https://medium.com/@juan.lopezutn/clean-architecture-en-la-vida-real-9da710e5ad4a
+https://medium.com/swlh/clean-architecture-java-spring-fea51e26e00
+
+============
+If you need run de project 
+
+mvn clean install
+
+mvn spring-boot:run
+
